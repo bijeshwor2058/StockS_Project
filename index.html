@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Stock Tracker Dashboard</h1>
+    </div>
+
+   <main>
+    <h3>Select Trending Stock</h3>
+
+    <div class="option-container">
+      <select name="load-stock" id="load-stock">
+        <option value="AAPL">AAPL</option>
+        <option value="GOOGL">GOOGL</option>
+        <option value="MSFT">MSFT</option>
+        <option value="AMZN">AMZN</option>
+        <option value="TSLA">TSLA</option>
+        <option value="FB">FB</option>
+        <option value="NFLX">NFLX</option>
+        <option value="NVDA">NVDA</option>
+        <option value="BABA">BABA</option>
+        <option value="INTC">INTC</option>
+      </select>
+
+      <button id="load-stock-btn">Load Stock</button>
+    </div>
+
+    <div class="search-container">
+      <input
+        type="text"
+        placeholder="Search for a stock(e.g.,AA)"
+        id="search-stock"
+      />
+      <button id="search-btn">Search</button>
+    </div>
+
+    <section id="stock-information">
+      <h2>Stock Information</h2>
+      <div id="stock-info"></div>
+    </section>
+
+    <h2>Stock Price Graph</h2>
+    <canvas id="stock-graph"></canvas>
+
+<!-- Table stock -->
+    <section id="stocktable">
+      <h2>Compare Stocks</h2>
+      <table id="stock-Table" border="1">
+        <thead>
+          <tr>
+            <th>Stock</th>
+            <th>Price</th>
+            <th>Change</th>
+            <th>Volume</th>
+          </tr>
+        </thead>
+
+        <tbody>
+        </tbody>
+
+      </table>
+    </section>
+   </main>
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>
